@@ -1,6 +1,9 @@
 const express = require("express");
 const session = require("express-session");
 const routes = require("./controllers");
+const exphbs = require("express-handlebars");
+const path = require("path");
+const hbs = exphbs.create({});
 require("dotenv").config({ path: require("find-config")(".env") });
 
 const sequelize = require("./config/connection");
@@ -11,7 +14,12 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: process.env.SESSION_SECRET,
-  cookie: {},
+  cookie: {
+    maxAge: 3600,
+    httpOnly: true,
+    secure: false,
+    sameSite: "strict",
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -21,8 +29,12 @@ const sess = {
 
 app.use(session(sess));
 
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
