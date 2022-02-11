@@ -8,22 +8,35 @@
 
 * {
   box-sizing: border-box;
-  background-color: #2d2d2d;
+  background-color: var(--primarycolor);
+}
+
+a {
+  color: var(--tertiarycolor);
 }
 
 body {
   font-family: Trispace, serif;
   line-height: 1.6;
-  color: #b3b9c5;
+  color: var(--secondarycolor);
 }
 
 header,
 .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--secondarycolor);
 }
 
-.href {
-  color: white;
+.btn {
+  background-color: var(--tertiarycolor);
+}
+
+.btn:hover {
+  background-color: var(--secondarycolor);
+  cursor: pointer;
+}
+
+.headerColor {
+  color: var(--tertiarycolor);
 }
 
 .no-button {
@@ -31,18 +44,12 @@ header,
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: var(--tertiarycolor);
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: var(--tertiarycolor);
   text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
 }
