@@ -1,24 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Trispace&display=swap");
 
 :root {
-  --primary: #2a0944;
-  --secondary: #fec260;
-  --tertiary: #a12568;
-  --quatrinary: #3b185f;
-  --light: #b3b9c5;
-  --dark: #2d2d2d;
-  --error: rgb(228, 46, 1);
-  --border-radius: 0.3rem;
+  --primarycolor: #2d2d2d;
+  --secondarycolor: #b3b9c5;
+  --tertiarycolor: #1572a4;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: #2d2d2d;
 }
 
 body {
   font-family: Trispace, serif;
   line-height: 1.6;
+  color: #b3b9c5;
 }
 
 header,
 .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+}
+
+.href {
+  color: white;
 }
 
 .no-button {
