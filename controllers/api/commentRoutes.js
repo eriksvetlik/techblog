@@ -17,14 +17,7 @@ router.post("/", withAuth, async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const commentData = await Comment.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
+    const commentData = await Comment.findAll();
 
     res.status(200).json(commentData);
   } catch (err) {
