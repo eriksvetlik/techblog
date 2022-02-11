@@ -5,6 +5,7 @@
   <br>
   <div>
     <form class="form new-comment-form">
+      <input type="hidden" id="post_id" name="post_id" value={{id}}> 
       <div class="form-group">
         <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
       </div>
@@ -28,4 +29,4 @@
   {{/if}}
 </div>
 
-<script src="./js/comment.js"></script>
+<script src="/js/comment.js"></script>

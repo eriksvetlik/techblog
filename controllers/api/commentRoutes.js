@@ -15,19 +15,16 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.delete("/:id", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    const commentData = await Comment.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
+    const commentData = await Comment.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
     });
-
-    if (!commentData) {
-      res.status(404).json({ message: "Can't post comment!" });
-      return;
-    }
 
     res.status(200).json(commentData);
   } catch (err) {
