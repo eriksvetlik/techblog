@@ -15,7 +15,6 @@
           <a href="/">&#60;/tech blog&#62;</a>
         </h1>
         <nav>
-          <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
             <a href="/profile">profile</a>
             |
@@ -26,18 +25,11 @@
         </nav>
       </header>
       <main class="container container-fluid mt-5">
-        <!-- Render the sub layout -->
         {{{body}}}
       </main>
-      <footer>
-
-      </footer>
     </div>
-
-    <!-- Render script for logged in users only -->
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
   </body>
-
 </html>

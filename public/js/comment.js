@@ -1,3 +1,4 @@
+// create comment on submit
 const newFormHandler = async (event) => {
   event.preventDefault();
 
