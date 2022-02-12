@@ -23,4 +23,4 @@ HTML | CSS | JavaScript | Node.js | Handlebars.js | Sequelize | MySQL
 
 # Link
 
-https://[placeholder].herokuapp.com/
+https://techblog21222.herokuapp.com/
