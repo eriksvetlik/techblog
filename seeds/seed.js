@@ -24,6 +24,7 @@ const seedDatabase = async () => {
     await Comment.create({
       ...comment,
       post_id: 1,
+      user_id: 1,
     });
   }
 
