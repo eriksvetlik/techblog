@@ -20,7 +20,3 @@ HTML | CSS | JavaScript | Node.js | Handlebars.js | Sequelize | MySQL
 # Screenshot
 
 ![Screenshot of webpage](./images/homework-readme.png)
-
-# Link
-
-https://techblog21222.herokuapp.com/
